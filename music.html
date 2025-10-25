@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHENDAM MEDIA BROADCAST - Music</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Components/pagination.css">
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Linking Google Fonts for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- === REUSED HEADER START === -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-area">
+                <a href="index.html">  <img src="/images/Icons/logo1 .jpg" alt="Shendam Media Broadcast Logo"></a>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-button"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="news.html" class="nav-button"><i class="fas fa-newspaper"></i> News</a></li>
+                    <li><a href="music.html" class="nav-button active"><i class="fas fa-music"></i> Music</a></li>
+                    <li><a href="contact.html" class="nav-button"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="aboutus.html" class="nav-button"><i class="fas fa-info-circle"></i> About Us</a></li>
+                </ul>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- === REUSED HEADER END === -->
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Latest Music Download</h1>
+            
+            <div class="music-grid-container">
+                <!-- Main Music Section (First 2 columns) -->
+                <section class="latest-music">
+                    
+                    <!-- Music Card 1 -->
+                    <article class="music-card ">
+                        <img src="/images/album-art/party Time.jpg" alt="Album Art" class="album-art">
+                        <div class="music-info">
+                            <h3 class="song-title">Party Time</h3>
+                            <p class="artist-name">Lino BlaQ</p>
+                            <audio controls src="/Music/Party Time.mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <a href="/Music/Party Time.mp3" download="/Music/Party Time.mp3" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Music Card 2 -->
+                    <article class="music-card">
+                        <img src="/images/album-art/Odumodublvck-The-Machine-Is-Coming-AlbumArtwork.jpg" alt="Album Art" class="album-art">
+                        <div class="music-info">
+                            <h3 class="song-title">Pay me</h3>
+                            <p class="artist-name">Odumodu Blvck ft stomzy, Zlatan</p>
+                            <audio controls src="/Music/ODUMODUBLVCK-PAY-ME-feat-Stormzy-Zlatan-Vistanaij.com_.mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <a href="/Music/ODUMODUBLVCK-PAY-ME-feat-Stormzy-Zlatan-Vistanaij.com_.mp3" download="/Music/ODUMODUBLVCK-PAY-ME-feat-Stormzy-Zlatan-Vistanaij.com_.mp3" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Music Card 3 -->
+                    <article class="music-card">
+                        <img src="/images/album-art/Odumodublvck-The-Machine-Is-Coming-AlbumArtwork.jpg" alt="Album Art" class="album-art">
+                        <div class="music-info">
+                            <h3 class="song-title">Big Time</h3>
+                            <p class="artist-name">Odumodu Blvck ft Wizkid</p>
+                            <audio controls src="/Music/Odumodublvck_Ft_Wizkid_-_Big_Time.mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <a href="/Music/Odumodublvck_Ft_Wizkid_-_Big_Time.mp3" download="/Music/Odumodublvck_Ft_Wizkid_-_Big_Time.mp3" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </article>
+                    
+                     <!-- Music Card 4 -->
+                    <article class="music-card">
+                        <img src="images/album-art/Jos city.jpg" alt="Album Art" class="album-art">
+                        <div class="music-info">
+                            <h3 class="song-title">Jos City </h3>
+                            <p class="artist-name">Lino BlaQ</p>
+                            <audio controls src="Music/JosCity.mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <a href="Music/JosCity.mp3" download="Music/JosCity.mp3" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </article>
+
+                </section>
+
+                <!-- Most Downloaded Section (Last column) -->
+                <aside class="most-downloaded">
+                    <h2 class="sidebar-title">Most Downloaded Music</h2>
+
+                    <!-- Small Music Card 1 -->
+                    <article class="small-music-card">
+                        <img src="images/album-art/Shendam.jpg" alt="Album Art" class="small-album-art">
+                        <div class="small-music-info">
+                            <h4 class="small-song-title">Shendam Town</h4>
+                            <p class="small-artist-name">Lino BlaQ</p>
+                                <a href="Music/Shendam Town.mp3" download="Music/Shendam Town.mp3" class="download-button-small">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Small Music Card 2 -->
+                    <article class="small-music-card">
+                        <img src="images/album-art/Doller Bill.jpg" alt="Album Art" class="small-album-art">
+                        <div class="small-music-info">
+                                <h4 class="small-song-title">Dollar Bill</h4>
+                                <p class="small-artist-name">Lino BlaQ</p>
+                             <a href="Music/Dollar Bill.mp3" download="/Music/Dollar Bill.mp3.mp3" class="download-button-small">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Small Music Card 3 -->
+                    <article class="small-music-card">
+                         <img src="/images/album-art/pain & gain.jpg" alt="Album Art" class="small-album-art">
+                        <div class="small-music-info">
+                            <h4 class="small-song-title">No PAin No Gain</h4>
+                            <p class="small-artist-name">Lino BlaQ</p>
+                             <a href="/Music/No-Pain - No-Gain.mp3" download="/Music/No-Pain - No-Gain.mp3" class="download-button-small">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </article>
+                </aside>
+            </div>
+        </div>
+        <!-- START OF PAGINATION COMPONENT -->
+<div class="pagination-container">
+    <ul class="pagination-list" id="pagination-list">
+        <!-- Previous Button -->
+        <li class="pagination-item">
+            <a href="#" class="page-link nav-link" data-page="prev">&laquo; Prev</a>
+        </li>
+        
+        <!-- Page Links are dynamically generated here -->
+        
+        <!-- Next Button -->
+        <li class="pagination-item">
+            <a href="music2.html" class="page-link nav-link" data-page="next">Next &raquo;</a>
+        </li>
+    </ul>
+</div>
+<!-- END OF PAGINATION COMPONENT -->
+    </main>
+
+    <!-- === REUSED FOOTER START === -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SHENDAM MEDIA BROADCAST. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- === REUSED FOOTER END === -->
+
+    <script src="script.js"></script>
+    <script>
+    // --- PAGINATION SCRIPT ---
+    const totalPages = 1; // <<-- IMPORTANT: Change this number to reflect your actual page count
+    let currentPage = 1; 
+    const maxVisiblePages = 2; 
+
+    const paginationList = document.getElementById('pagination-list');
+    const prevLink = paginationList.querySelector('[data-page="prev"]');
+    const nextLink = paginationList.querySelector('[data-page="next"]');
+
+    function renderPagination() {
+        // Remove existing page numbers
+        const existingPages = paginationList.querySelectorAll('.page-number');
+        existingPages.forEach(p => p.remove());
+
+        // Determine the range of page numbers to show
+        let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+        let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+        if (endPage - startPage + 1 < maxVisiblePages) {
+            startPage = Math.max(1, endPage - maxVisiblePages + 1);
+        }
+
+        // Create the page number elements
+        const fragment = document.createDocumentFragment();
+        for (let i = startPage; i <= endPage; i++) {
+            const li = document.createElement('li');
+            li.className = 'pagination-item page-number';
+            
+            const a = document.createElement('a');
+            a.href = `music1${i}.html`; // **Update this link format to match your pages!**
+            a.textContent = i;
+            a.className = 'page-link';
+            a.setAttribute('data-page-index', i);
+
+            if (i === currentPage) {
+                a.classList.add('active');
+            }
+            
+            // Add event listener for visual switching
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentPage = parseInt(e.target.getAttribute('data-page-index'));
+                renderPagination();
+            });
+
+            li.appendChild(a);
+            fragment.appendChild(li);
+        }
+
+        // Insert the generated pages before the 'Next' button
+        paginationList.insertBefore(fragment, nextLink.parentNode);
+
+        // Update disabled/enabled state of Prev/Next buttons
+        prevLink.parentNode.style.opacity = currentPage === 1 ? '0.5' : '1';
+        prevLink.style.pointerEvents = currentPage === 1 ? 'none' : 'auto';
+        
+        nextLink.parentNode.style.opacity = currentPage === totalPages ? '0.5' : '1';
+        nextLink.style.pointerEvents = currentPage === totalPages ? 'none' : 'auto';
+    }
+
+    // Add listeners for Prev/Next navigation
+    prevLink.addEventListener('click', (e) => {
+        if (currentPage > 1) {
+            e.preventDefault();
+            currentPage--;
+            // In a real application, you would load the content for the new page here
+            renderPagination();
+        }
+    });
+
+    nextLink.addEventListener('click', (e) => {
+        if (currentPage < totalPages) {
+            e.preventDefault();
+            currentPage++;
+            // In a real application, you would load the content for the new page here
+            renderPagination();
+        }
+    });
+
+    // Initialize the pagination bar once the script loads
+    renderPagination();
+</script>
+</body>
+</html>
