@@ -1,0 +1,263 @@
+/* Global Reset and Typography */
+:root {
+    --primary-color: #1e90ff; /* Deep Sky Blue for branding */
+    --secondary-color: #f0f8ff; /* Alice Blue for accents */
+    --text-dark: #333;
+    --text-light: #555;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #f4f7f6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* ==================================== */
+/* HEADER STYLES & DROPDOWN LOGIC       */
+/* ==================================== */
+
+.main-header {
+    background-color: #ffffff;
+    box-shadow: var(--shadow-light);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: sticky; /* Sticky header for better navigation */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: color 0.2s;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.4);
+}
+
+/* Hide Hamburger Toggle on Desktop */
+.menu-toggle {
+    display: none; 
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.menu-toggle:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ==================================== */
+/* CONTACT FORM STYLES                  */
+/* ==================================== */
+
+.contact-page-content {
+    padding: 80px 20px 50px; /* Add top padding to clear the fixed/sticky header */
+    min-height: calc(100vh - 100px); /* Ensures content fills most of the screen */
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-note {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.send-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 20px;
+}
+
+.send-button:hover {
+    background-color: #0f70db;
+    transform: translateY(-2px);
+}
+
+.send-button i {
+    margin-right: 10px;
+}
+
+/* ==================================== */
+/* FOOTER STYLES                        */
+/* ==================================== */
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--text-dark);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* ================================================= */
+/* MEDIA QUERY FOR MOBILE DEVICES (Dropdown Logic)   */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 20px;
+    }
+    
+    /* Show Hamburger on Mobile */
+    .menu-toggle {
+        display: block; 
+    }
+
+    /* Navigation Links: Start hidden and full-width dropdown */
+    .nav-links {
+        display: none; /* Initially hidden */
+        position: absolute;
+        top: 60px; /* Position right below the header */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    /* State when the menu is active (JavaScript adds this class) */
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        display: block; 
+        padding: 12px 20px;
+        border-radius: 0; 
+        color: var(--text-dark);
+    }
+    
+    .nav-links li a:hover,
+    .nav-links li a.active {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+
+    /* Adjust contact form for smaller screens */
+    .contact-container {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+    }
+}

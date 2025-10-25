@@ -1,0 +1,114 @@
+/* ==================================== */
+/* ABOUT US PAGE STYLES        */
+/* ==================================== */
+
+/* Main content container for the About Page */
+.about-page-content {
+    padding-top: 100px; /* Offset for fixed header */
+    padding-bottom: 50px;
+    background-color: var(--white-color); /* Use white background */
+}
+
+/* Single-column container to center content and limit width */
+.about-container {
+    max-width: 900px; /* Wide but readable column */
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* ABOUT US Heading Style */
+.about-container h1 {
+    font-size: 2.8rem;
+    color: var(--sky-blue-color); /* Sky Blue for the main title */
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+/* Image styling */
+.about-image {
+    width: 100%;
+    max-height: 400px; /* Set a max height for desktop view */
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 8px; /* Slight rounding for modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distorting */
+    display: block; /* Removes any default bottom spacing */
+}
+
+/* Text block for mission and information */
+.about-text-block {
+    text-align: left;
+    line-height: 1.8; /* Improves readability for bulky text */
+    color: #333;
+    font-size: 1.1rem;
+    padding-bottom: 30px;
+}
+
+.about-text-block p {
+    margin-bottom: 25px; /* Spacing between paragraphs */
+    text-align: justify; /* Justify text for a formal look */
+}
+
+/* Sub-headings for importance/benefits sections */
+.about-text-block h3 {
+    color: var(--sky-blue-color);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #e0f7fa; /* Light border for separation */
+    padding-bottom: 5px;
+}
+
+.about-text-block ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.about-text-block ul li {
+    margin-bottom: 8px;
+}
+
+
+/* ==================================== */
+/* MOBILE RESPONSIVENESS       */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    /* Adjust padding for smaller screens */
+    .about-page-content {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
+    /* Adjust main title size */
+    .about-container h1 {
+        font-size: 2rem;
+    }
+
+    /* Ensure padding is minimal on very small screens */
+    .about-container {
+        padding: 0 15px;
+    }
+    
+    /* Reduce max height of the image */
+    .about-image {
+        max-height: 250px;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust text size for mobile readability */
+    .about-text-block {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding-bottom: 10px;
+    }
+}

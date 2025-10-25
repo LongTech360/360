@@ -1,0 +1,29 @@
+/* Ensure all images are responsive */
+.news-image {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes any extra space below the image */
+}
+
+/* Base card styling */
+.news-card .news-image {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the image doesn't overflow rounded corners */
+  margin: 1rem; 
+}
+
+/* Container for text content */
+.news-content {
+  padding: 2rem;
+}
+
+/* Initially hide the text inside the hidden-text span */
+.read-more-container .hidden-text {
+  display: none;
+}
+
+/* When the parent container has the 'expanded' class, make the hidden text visible */
+.read-more-container.expanded .hidden-text {
+  display: inline;
+}
